@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Administrativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-roboto bg-gray-100 text-gray-900">
+    <header class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-2xl font-bold">Login Administrativo</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4">
+        <section class="my-8">
+            <form id="loginForm" class="bg-white p-6 rounded-lg shadow-lg" onsubmit="handleLogin(event)">
+                <div class="mb-4">
+                    <label for="username" class="block text-sm font-bold mb-2">Usuário</label>
+                    <input type="text" id="username" class="w-full p-2 border rounded-lg" placeholder="Digite o usuário" required>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-bold mb-2">Senha</label>
+                    <input type="password" id="password" class="w-full p-2 border rounded-lg" placeholder="Digite a senha" required>
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Entrar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Sistema de Gestão Jurídica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Credenciais de administrador
+            const adminUser = 'admin';
+            const adminPassword = '1234';
+
+            if (username === adminUser && password === adminPassword) {
+                window.location.href = 'cadastro_escritorio.html';
+            } else {
+                alert('Usuário ou senha inválidos!');
+            }
+        }
+    </script>
+</body>
+</html>
