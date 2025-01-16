@@ -20,80 +20,161 @@
             <nav>
                 <ul class="flex space-x-4">
                     <li><a class="hover:underline" href="#home">Página Inicial</a></li>
-                    <li><a class="hover:underline" href="#commissions">Comissões</a></li>
-                    <li><a class="hover:underline" href="#service-desk">Service Desk</a></li>
-                    <li><a class="hover:underline" href="#resources">Recursos</a></li>
-                    <li><a class="hover:underline" href="#events">Eventos</a></li>
-                    <li><a class="hover:underline" href="#community">Comunidade</a></li>
-                    <li><a class="hover:underline" href="#indicators">Indicadores</a></li>
-                    <li><a class="hover:underline" href="#contact">Contato</a></li>
+                    <li><a class="hover:underline" href="#communication">Comunicação</a></li>
+                    <li><a class="hover:underline" href="#documents">Documentos</a></li>
+                    <li><a class="hover:underline" href="#collaboration">Colaboração</a></li>
+                    <li><a class="hover:underline" href="#hr">Recursos Humanos</a></li>
+                    <li><a class="hover:underline" href="#support">Suporte Técnico</a></li>
+                    <li><a class="hover:underline" href="#analytics">Relatórios</a></li>
+                    <li><a class="hover:underline" href="#news">Notícias</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto p-4">
-        <!-- Página Inicial -->
-        <section id="home" class="my-8">
-            <h2 class="text-3xl font-bold mb-4">Bem-vindo à Intranet da ABA</h2>
-            <p class="mb-4">A ABA promove a justiça e oferece suporte aos advogados associados por meio de recursos e serviços.</p>
-        </section>
-
-        <!-- Notícias Ampliadas -->
-        <section id="news" class="my-8">
-            <h2 class="text-3xl font-bold mb-4">Notícias</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- Layout -->
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-1/4 bg-gray-200 p-4 h-screen overflow-y-auto">
+            <section class="mb-8">
+                <h2 class="text-xl font-bold mb-2">Reconhecimento e Engajamento</h2>
                 <div class="bg-white p-4 rounded shadow">
-                    <h3 class="text-xl font-bold mb-2">Notícias do Pauta Brasil</h3>
-                    <iframe src="https://pautabrasil.com.br/" class="w-full h-96 rounded" frameborder="0"></iframe>
+                    <h3 class="text-lg font-bold mb-2">Destaques do Mês</h3>
+                    <p>Parabenizamos <strong>Maria Silva</strong> pelo excelente desempenho!</p>
                 </div>
+            </section>
+            <section class="mb-8">
+                <h2 class="text-xl font-bold mb-2">Comissões da ABA</h2>
                 <div class="bg-white p-4 rounded shadow">
-                    <h3 class="text-xl font-bold mb-2">Notícias da Ordem Democrática</h3>
-                    <iframe src="https://ordemdemocratica.com.br/" class="w-full h-96 rounded" frameborder="0"></iframe>
+                    <h3 class="text-lg font-bold mb-2">Direito Civil</h3>
+                    <p>Promove estudos e debates sobre o Direito Civil.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Nossos Indicadores -->
-        <section id="indicators" class="my-8">
-            <h2 class="text-3xl font-bold mb-4">Nossos Indicadores</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="text-xl font-bold mb-2">Associados Ativos</h3>
-                    <p class="text-4xl font-bold text-blue-800">15.250</p>
+                <div class="bg-white p-4 rounded shadow mt-4">
+                    <h3 class="text-lg font-bold mb-2">Direito Penal</h3>
+                    <p>Analisa questões relacionadas ao Direito Penal.</p>
                 </div>
+            </section>
+            <section class="mb-8">
+                <h2 class="text-xl font-bold mb-2">Nossos Indicadores</h2>
                 <div class="bg-white p-4 rounded shadow">
-                    <h3 class="text-xl font-bold mb-2">Seguidores no Instagram</h3>
-                    <p class="text-4xl font-bold text-blue-800">34.800</p>
+                    <h3 class="text-lg font-bold mb-2">Associados Ativos</h3>
+                    <p class="text-2xl font-bold text-blue-800">15.250</p>
                 </div>
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="text-xl font-bold mb-2">Seguidores no LinkedIn</h3>
-                    <p class="text-4xl font-bold text-blue-800">12.500</p>
+                <div class="bg-white p-4 rounded shadow mt-4">
+                    <h3 class="text-lg font-bold mb-2">Seguidores no Instagram</h3>
+                    <p class="text-2xl font-bold text-blue-800">34.800</p>
                 </div>
-                <div class="bg-white p-4 rounded shadow">
-                    <h3 class="text-xl font-bold mb-2">Canal no YouTube</h3>
-                    <p class="text-4xl font-bold text-blue-800">8.340</p>
+                <div class="bg-white p-4 rounded shadow mt-4">
+                    <h3 class="text-lg font-bold mb-2">Seguidores no LinkedIn</h3>
+                    <p class="text-2xl font-bold text-blue-800">12.500</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow mt-4">
+                    <h3 class="text-lg font-bold mb-2">Canal no YouTube</h3>
+                    <p class="text-2xl font-bold text-blue-800">8.340</p>
                     <a href="https://www.youtube.com/@ABANACIONAL" target="_blank" class="text-blue-600 hover:underline">Visite o canal</a>
                 </div>
-            </div>
-        </section>
+            </section>
+        </aside>
 
-        <!-- Comissões -->
-        <section id="commissions" class="my-8">
-            <h2 class="text-3xl font-bold mb-4">Comissões da ABA</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <article class="bg-white p-4 rounded shadow">
-                    <h3 class="text-xl font-bold mb-2">Direito Civil</h3>
-                    <p>Promove estudos e debates sobre o Direito Civil.</p>
-                </article>
-                <article class="bg-white p-4 rounded shadow">
-                    <h3 class="text-xl font-bold mb-2">Direito Penal</h3>
-                    <p>Analisa questões relacionadas ao Direito Penal.</p>
-                </article>
-            </div>
-        </section>
-    </main>
+        <!-- Main Content -->
+        <main class="w-3/4 p-4">
+            <!-- Página Inicial -->
+            <section id="home" class="my-8">
+                <h2 class="text-3xl font-bold mb-4">Bem-vindo à Intranet da ABA</h2>
+                <p>A ABA promove a justiça e oferece suporte aos advogados associados por meio de recursos e serviços.</p>
+            </section>
+
+            <!-- Comunicação Interna -->
+            <section id="communication" class="my-8">
+                <h2 class="text-3xl font-bold mb-4">Comunicação Interna</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded shadow">
+                        <h3 class="text-xl font-bold mb-2">Quadro de Avisos</h3>
+                        <p>Últimos comunicados:</p>
+                        <ul class="list-disc ml-5">
+                            <li>Reunião geral em 20/01/2025 às 14h.</li>
+                            <li>Atualização de política de benefícios.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow">
+                        <h3 class="text-xl font-bold mb-2">Calendário Compartilhado</h3>
+                        <iframe src="https://calendar.google.com" class="w-full h-96 rounded" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notícias Ampliadas -->
+            <section id="news" class="my-8">
+                <h2 class="text-3xl font-bold mb-4">Notícias</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded shadow">
+                        <h3 class="text-xl font-bold mb-2">Notícias do Pauta Brasil</h3>
+                        <iframe src="https://pautabrasil.com.br/" class="w-full h-96 rounded" frameborder="0"></iframe>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow">
+                        <h3 class="text-xl font-bold mb-2">Notícias da Ordem Democrática</h3>
+                        <iframe src="https://ordemdemocratica.com.br/" class="w-full h-96 rounded" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gestão de Documentos -->
+            <section id="documents" class="my-8">
+                <h2 class="text-3xl font-bold mb-4">Gestão de Documentos</h2>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Repositório Central</h3>
+                    <p>Acesse documentos importantes:</p>
+                    <ul class="list-disc ml-5">
+                        <li><a href="manual-uso.pdf" class="text-blue-600 hover:underline">Manual de Uso da Intranet</a></li>
+                        <li><a href="politicas-seguranca.pdf" class="text-blue-600 hover:underline">Políticas de Segurança</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Ferramentas de Colaboração -->
+            <section id="collaboration" class="my-8">
+                <h2 class="text-3xl font-bold mb-4">Ferramentas de Colaboração</h2>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Gerenciamento de Projetos</h3>
+                    <p>Organize suas tarefas:</p>
+                    <iframe src="https://trello.com" class="w-full h-96 rounded" frameborder="0"></iframe>
+                </div>
+            </section>
+
+            <!-- Recursos Humanos -->
+            <section id="hr" class="my-8">
+                <h2 class="text-3xl font-bold mb-4">Recursos Humanos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded shadow">
+                        <h3 class="text-xl font-bold mb-2">Gestão de Benefícios</h3>
+                        <p>Informações sobre férias, planos de saúde e outros benefícios.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow">
+                        <h3 class="text-xl font-bold mb-2">Treinamentos e Cursos</h3>
+                        <p>Portal de aprendizado com materiais educativos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Suporte Técnico -->
+            <section id="support" class="my-8">
+                <h2 class="text-3xl font-bold mb-4">Suporte Técnico</h2>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Central de Atendimento</h3>
+                    <p>Reporte problemas e acompanhe soluções.</p>
+                </div>
+            </section>
+
+            <!-- Relatórios e Análises -->
+            <section id="analytics" class="my-8">
+                <h2 class="text-3xl font-bold mb-4">Relatórios e Análises</h2>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Análise de Uso</h3>
+                    <p>Dados sobre como a intranet está sendo utilizada.</p>
+                </div>
+            </section>
+        </main>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-blue-800 text-white p-4">
