@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Intranet da Associação Brasileira de Advogados (ABA) para acesso a recursos, comissões, eventos e suporte.">
+    <title>Intranet ABA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-roboto bg-gray-100">
+    <!-- Header -->
+    <header class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://aba.adv.br/wp-content/uploads/2024/11/Logo-Site-ABA.png" alt="Logo ABA" class="h-12">
+                <h1 class="text-2xl font-bold">Associação Brasileira de Advogados (ABA)</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a class="hover:underline" href="#home">Página Inicial</a></li>
+                    <li><a class="hover:underline" href="#commissions">Comissões</a></li>
+                    <li><a class="hover:underline" href="#service-desk">Service Desk</a></li>
+                    <li><a class="hover:underline" href="#resources">Recursos</a></li>
+                    <li><a class="hover:underline" href="#events">Eventos</a></li>
+                    <li><a class="hover:underline" href="#community">Comunidade</a></li>
+                    <li><a class="hover:underline" href="#indicators">Indicadores</a></li>
+                    <li><a class="hover:underline" href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4">
+        <!-- Página Inicial -->
+        <section id="home" class="my-8">
+            <h2 class="text-3xl font-bold mb-4">Bem-vindo à Intranet da ABA</h2>
+            <p class="mb-4">A ABA promove a justiça e oferece suporte aos advogados associados por meio de recursos e serviços.</p>
+        </section>
+
+        <!-- Notícias Ampliadas -->
+        <section id="news" class="my-8">
+            <h2 class="text-3xl font-bold mb-4">Notícias</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Notícias do Pauta Brasil</h3>
+                    <iframe src="https://pautabrasil.com.br/" class="w-full h-96 rounded" frameborder="0"></iframe>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Notícias da Ordem Democrática</h3>
+                    <iframe src="https://ordemdemocratica.com.br/" class="w-full h-96 rounded" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nossos Indicadores -->
+        <section id="indicators" class="my-8">
+            <h2 class="text-3xl font-bold mb-4">Nossos Indicadores</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Associados Ativos</h3>
+                    <p class="text-4xl font-bold text-blue-800">15.250</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Seguidores no Instagram</h3>
+                    <p class="text-4xl font-bold text-blue-800">34.800</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Seguidores no LinkedIn</h3>
+                    <p class="text-4xl font-bold text-blue-800">12.500</p>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Canal no YouTube</h3>
+                    <p class="text-4xl font-bold text-blue-800">8.340</p>
+                    <a href="https://www.youtube.com/@ABANACIONAL" target="_blank" class="text-blue-600 hover:underline">Visite o canal</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comissões -->
+        <section id="commissions" class="my-8">
+            <h2 class="text-3xl font-bold mb-4">Comissões da ABA</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <article class="bg-white p-4 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Direito Civil</h3>
+                    <p>Promove estudos e debates sobre o Direito Civil.</p>
+                </article>
+                <article class="bg-white p-4 rounded shadow">
+                    <h3 class="text-xl font-bold mb-2">Direito Penal</h3>
+                    <p>Analisa questões relacionadas ao Direito Penal.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Associação Brasileira de Advogados. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
