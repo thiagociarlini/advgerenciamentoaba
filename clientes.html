@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Clientes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-roboto bg-gray-100 text-gray-900">
+    <header class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">Gestão Jurídica - Clientes</div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a class="hover:underline" href="sistema.html">Voltar ao Sistema</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4">
+        <section class="my-8">
+            <h1 class="text-3xl font-bold mb-4">Cadastro de Clientes</h1>
+            <form class="bg-white p-6 rounded-lg shadow-lg" action="/clientes/cadastrar" method="POST">
+                <div class="mb-4">
+                    <label for="nome" class="block text-sm font-bold mb-2">Nome do Cliente</label>
+                    <input type="text" id="nome" name="nome" class="w-full p-2 border rounded-lg" placeholder="Digite o nome do cliente" required>
+                </div>
+                <div class="mb-4">
+                    <label for="cpf_cnpj" class="block text-sm font-bold mb-2">CPF/CNPJ</label>
+                    <input type="text" id="cpf_cnpj" name="cpf_cnpj" class="w-full p-2 border rounded-lg" placeholder="Digite o CPF ou CNPJ" required>
+                </div>
+                <div class="mb-4">
+                    <label for="endereco" class="block text-sm font-bold mb-2">Endereço</label>
+                    <input type="text" id="endereco" name="endereco" class="w-full p-2 border rounded-lg" placeholder="Digite o endereço completo" required>
+                </div>
+                <div class="mb-4">
+                    <label for="telefone" class="block text-sm font-bold mb-2">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" class="w-full p-2 border rounded-lg" placeholder="Digite o telefone" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-bold mb-2">E-mail</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border rounded-lg" placeholder="Digite o e-mail" required>
+                </div>
+                <div class="mb-4">
+                    <label for="observacoes" class="block text-sm font-bold mb-2">Observações</label>
+                    <textarea id="observacoes" name="observacoes" class="w-full p-2 border rounded-lg" placeholder="Digite informações adicionais"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Cadastrar Cliente</button>
+            </form>
+        </section>
+
+        <section class="my-8">
+            <h2 class="text-3xl font-bold mb-4">Lista de Clientes</h2>
+            <table class="min-w-full bg-white">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 border-b">ID</th>
+                        <th class="py-2 px-4 border-b">Nome</th>
+                        <th class="py-2 px-4 border-b">CPF/CNPJ</th>
+                        <th class="py-2 px-4 border-b">Telefone</th>
+                        <th class="py-2 px-4 border-b">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">001</td>
+                        <td class="py-2 px-4 border-b">João Silva</td>
+                        <td class="py-2 px-4 border-b">123.456.789-00</td>
+                        <td class="py-2 px-4 border-b">(61) 98765-4321</td>
+                        <td class="py-2 px-4 border-b">
+                            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Editar</button>
+                            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Sistema de Gestão Jurídica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

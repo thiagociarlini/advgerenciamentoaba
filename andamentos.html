@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Andamentos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-roboto bg-gray-100 text-gray-900">
+    <header class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">Gestão Jurídica - Andamentos</div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a class="hover:underline" href="sistema.html">Voltar ao Sistema</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4">
+        <section class="my-8">
+            <h1 class="text-3xl font-bold mb-4">Cadastro de Andamentos</h1>
+            <form class="bg-white p-6 rounded-lg shadow-lg" action="/andamentos/cadastrar" method="POST">
+                <div class="mb-4">
+                    <label for="processo" class="block text-sm font-bold mb-2">Processo Associado</label>
+                    <input type="text" id="processo" name="processo" class="w-full p-2 border rounded-lg" placeholder="Digite o ID do processo" required>
+                </div>
+                <div class="mb-4">
+                    <label for="descricao" class="block text-sm font-bold mb-2">Descrição do Andamento</label>
+                    <textarea id="descricao" name="descricao" class="w-full p-2 border rounded-lg" placeholder="Digite a descrição do andamento" required></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="data" class="block text-sm font-bold mb-2">Data do Andamento</label>
+                    <input type="date" id="data" name="data" class="w-full p-2 border rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <label for="responsavel" class="block text-sm font-bold mb-2">Responsável</label>
+                    <input type="text" id="responsavel" name="responsavel" class="w-full p-2 border rounded-lg" placeholder="Digite o nome do responsável" required>
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Cadastrar Andamento</button>
+            </form>
+        </section>
+
+        <section class="my-8">
+            <h2 class="text-3xl font-bold mb-4">Lista de Andamentos</h2>
+            <table class="min-w-full bg-white">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 border-b">Processo</th>
+                        <th class="py-2 px-4 border-b">Descrição</th>
+                        <th class="py-2 px-4 border-b">Data</th>
+                        <th class="py-2 px-4 border-b">Responsável</th>
+                        <th class="py-2 px-4 border-b">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">001</td>
+                        <td class="py-2 px-4 border-b">Petição inicial protocolada</td>
+                        <td class="py-2 px-4 border-b">10/01/2025</td>
+                        <td class="py-2 px-4 border-b">João Silva</td>
+                        <td class="py-2 px-4 border-b">
+                            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Editar</button>
+                            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4 border-b">002</td>
+                        <td class="py-2 px-4 border-b">Audiência marcada</td>
+                        <td class="py-2 px-4 border-b">15/01/2025</td>
+                        <td class="py-2 px-4 border-b">Maria Souza</td>
+                        <td class="py-2 px-4 border-b">
+                            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Editar</button>
+                            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Sistema de Gestão Jurídica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

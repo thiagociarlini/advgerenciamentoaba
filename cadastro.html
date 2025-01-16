@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Escritórios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-roboto bg-gray-100 text-gray-900">
+    <header class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">Gestão Jurídica - Cadastro</div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a class="hover:underline" href="sistema.html">Ir para o Sistema</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4">
+        <section id="cadastro" class="my-8">
+            <h1 class="text-3xl font-bold mb-4">Cadastro de Novo Escritório</h1>
+            <form class="bg-white p-6 rounded-lg shadow-lg" action="/cadastrar" method="POST">
+                <div class="mb-4">
+                    <label for="nome" class="block text-sm font-bold mb-2">Nome do Escritório</label>
+                    <input type="text" id="nome" name="nome" class="w-full p-2 border rounded-lg" placeholder="Digite o nome do escritório" required>
+                </div>
+                <div class="mb-4">
+                    <label for="responsavel" class="block text-sm font-bold mb-2">Responsável</label>
+                    <input type="text" id="responsavel" name="responsavel" class="w-full p-2 border rounded-lg" placeholder="Digite o nome do responsável" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-bold mb-2">E-mail</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border rounded-lg" placeholder="Digite o e-mail de contato" required>
+                </div>
+                <div class="mb-4">
+                    <label for="telefone" class="block text-sm font-bold mb-2">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" class="w-full p-2 border rounded-lg" placeholder="Digite o telefone de contato" required>
+                </div>
+                <div class="mb-4">
+                    <label for="senha" class="block text-sm font-bold mb-2">Senha</label>
+                    <input type="password" id="senha" name="senha" class="w-full p-2 border rounded-lg" placeholder="Digite uma senha" required>
+                </div>
+                <div class="mb-4">
+                    <label for="mensalidade" class="block text-sm font-bold mb-2">Mensalidade</label>
+                    <p class="text-gray-600">R$ 60,00 por mês</p>
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Sistema de Gestão Jurídica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

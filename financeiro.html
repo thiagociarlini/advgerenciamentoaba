@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Financeira</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-roboto bg-gray-100 text-gray-900">
+    <header class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">Gestão Jurídica - Financeiro</div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a class="hover:underline" href="sistema.html">Voltar ao Sistema</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4">
+        <section class="my-8">
+            <h1 class="text-3xl font-bold mb-4">Cadastro de Movimentações Financeiras</h1>
+            <form class="bg-white p-6 rounded-lg shadow-lg" action="/financeiro/cadastrar" method="POST">
+                <div class="mb-4">
+                    <label for="tipo" class="block text-sm font-bold mb-2">Tipo</label>
+                    <select id="tipo" name="tipo" class="w-full p-2 border rounded-lg">
+                        <option value="receita">Receita</option>
+                        <option value="despesa">Despesa</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="descricao" class="block text-sm font-bold mb-2">Descrição</label>
+                    <input type="text" id="descricao" name="descricao" class="w-full p-2 border rounded-lg" placeholder="Digite a descrição" required>
+                </div>
+                <div class="mb-4">
+                    <label for="valor" class="block text-sm font-bold mb-2">Valor</label>
+                    <input type="number" id="valor" name="valor" class="w-full p-2 border rounded-lg" placeholder="Digite o valor" required>
+                </div>
+                <div class="mb-4">
+                    <label for="data" class="block text-sm font-bold mb-2">Data</label>
+                    <input type="date" id="data" name="data" class="w-full p-2 border rounded-lg" required>
+                </div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Cadastrar Movimentação</button>
+            </form>
+        </section>
+
+        <section class="my-8">
+            <h2 class="text-3xl font-bold mb-4">Resumo Financeiro</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Receitas</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Honorário - R$ 5.000,00</li>
+                        <li>Consultoria - R$ 7.500,00</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-2">Despesas</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Aluguel - R$ 2.000,00</li>
+                        <li>Marketing - R$ 1.000,00</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Sistema de Gestão Jurídica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
